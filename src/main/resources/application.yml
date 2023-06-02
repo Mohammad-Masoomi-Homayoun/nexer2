@@ -1,0 +1,14 @@
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        format_sql: false
+    show-sql: true
+
+  datasource:
+    name: nexer
+    username: root
+    password: 123456
+    url:  jdbc:mysql://localhost:3306/nexer?useSSL=false&useUnicode=true&characterEncoding=UTF8

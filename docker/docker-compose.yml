@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+  mysql:
+    image: mysql:5.7.25
+    restart: unless-stopped
+    container_name: local_db
+    environment:
+      MYSQL_DATABASE: nexer
+      MYSQL_USER: root
+      MYSQL_ROOT_PASSWORD: 123456
+    command: --init-file /data/application/init.sql
+    volumes:
+      - ./data/init.sql:/data/application/init.sql
+    ports:
+      - 3306:3306
